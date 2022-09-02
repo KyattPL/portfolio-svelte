@@ -45,9 +45,9 @@
 
 <svelte:window on:resize={closeMenu} />
 
-<div class="h-screen">
+<div class="">
     <div
-        class="flex px-4 py-8 items-center bg-slate-200 dark:border-black border-gray-400 border-b-4 dark:bg-black dark:text-white  text-2xl font-sans h-40">
+        class="flex static h-32 w-screen max-w-full px-4 py-8 items-center bg-slate-200 dark:border-black border-gray-400 border-b-4 dark:bg-black dark:text-white  text-2xl font-sans">
         <div class="mr-4">
             <a href="{base}/">
                 <img class="rounded-full object-scale-down w-20" src={logo} alt="logo" />
@@ -59,7 +59,7 @@
         {#if isBurgerOpen}
             <div class="flex-none block lg:hidden">
                 <button
-                    class="rounded-full bg-slate-300 dark:bg-slate-700 px-8 py-4 dark:hover:bg-slate-600 hover:bg-slate-400"
+                    class="rounded-full bg-slate-300 dark:bg-slate-700 px-8 py-4 dark:hover:bg-slate-600 hover:bg-slate-400 mr-4"
                     on:click={closeMenu}>
                     X
                 </button>
@@ -67,7 +67,7 @@
         {:else}
             <div class="flex-none block lg:hidden">
                 <button
-                    class="rounded-full bg-slate-300 dark:bg-slate-700 px-8 py-4 dark:hover:bg-slate-600 hover:bg-slate-400"
+                    class="rounded-full bg-slate-300 dark:bg-slate-700 px-8 py-4 dark:hover:bg-slate-600 hover:bg-slate-400 mr-4"
                     on:click={openMenu}>
                     ☰
                 </button>
@@ -117,19 +117,19 @@
     </div>
     {#if isBurgerOpen}
         <div
-            class="w-full py-2 text-center bg-slate-300 dark:bg-slate-700 dark:text-white text-2xl dark:hover:bg-slate-600 hover:bg-slate-400">
+            class="w-full py-2 text-center bg-slate-300 dark:bg-black dark:text-white text-2xl dark:hover:bg-slate-900 hover:bg-slate-400 fixed top-32">
             <a href="{base}/about">
                 <p>About</p>
             </a>
         </div>
         <div
-            class="w-full py-2 text-center bg-slate-300 dark:bg-slate-700 dark:text-white text-2xl dark:hover:bg-slate-600 hover:bg-slate-400">
+            class="w-full py-2 text-center bg-slate-300 dark:bg-black dark:text-white text-2xl dark:hover:bg-slate-900 hover:bg-slate-400 fixed top-4">
             <a href="{base}/about">
                 <p>Projects</p>
             </a>
         </div>
         <div
-            class="w-full py-2 text-center bg-slate-300 dark:bg-slate-700 dark:text-white text-2xl dark:hover:bg-slate-600 hover:bg-slate-400">
+            class="w-full py-2 text-center bg-slate-300 dark:bg-black dark:text-white text-2xl dark:hover:bg-slate-900 hover:bg-slate-400">
             <a href="{base}/about">
                 <p>Github</p>
             </a>
@@ -137,7 +137,7 @@
         {#if theme === "dark"}
             <div class="">
                 <button
-                    class="w-full py-2 text-center bg-slate-300 dark:bg-slate-700 dark:text-white text-2xl dark:hover:bg-slate-600 hover:bg-slate-400"
+                    class="w-full py-2 text-center bg-slate-300 dark:bg-black dark:text-white text-2xl dark:hover:bg-slate-900 hover:bg-slate-400"
                     on:click={changeTheme}>
                     ☀️
                 </button>
@@ -145,7 +145,7 @@
         {:else}
             <div class="">
                 <button
-                    class="w-full py-2 text-center bg-slate-300 dark:bg-slate-700 dark:text-white text-2xl dark:hover:bg-slate-600 hover:bg-slate-400"
+                    class="w-full py-2 text-center bg-slate-300 dark:bg-black dark:text-white text-2xl dark:hover:bg-slate-900 hover:bg-slate-400"
                     on:click={changeTheme}>
                     🌙
                 </button>
